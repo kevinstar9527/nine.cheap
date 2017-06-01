@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/coordinator_layout"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/layout_app_bar"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_scrollFlags="enterAlways|scroll">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <ImageButton
+                    android:id="@+id/iv_home_left"
+                    android:tag="skin:home_ic_left_btn:src"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_ic_left_btn"
+                    android:layout_centerVertical="true" />
+                <ImageView android:layout_gravity="center"
+                           android:tag="skin:nav_jpjielogo:src"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/nav_jpjielogo"
+                           android:layout_centerInParent="true" />
+                <RelativeLayout
+                    android:id="@+id/layout_group_entry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_30"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:id="@+id/imageview_group_entry"
+                        android:tag="skin:nav_button_tuan:src"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/nav_button_tuan"
+                        android:layout_centerVertical="true" />
+                    <ImageView
+                        android:id="@+id/imageview_group_point"
+                        android:tag="skin:shape_group_point:background"
+                        android:background="@drawable/shape_group_point"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imageview_group_entry" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <View
+            android:id="@+id/line"
+            android:tag="skin:my_center_cutLine:background"
+            android:background="@color/my_center_cutLine"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px" />
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:tag="skin:tab_background:background|skin:tab_indicator_color:tl_indicator_color|skin:tab_select_color:tl_textSelectColor|skin:tab_unSelect_color:tl_textUnselectColor"
+            android:background="@color/tab_background"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:fillViewport="false"
+            tl:tl_indicator_color="@color/tab_indicator_color"
+            tl:tl_indicator_gravity="BOTTOM"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_padding="16.0dip"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textAllCaps="true"
+            tl:tl_textSelectColor="@color/tab_select_color"
+            tl:tl_textUnselectColor="@color/tab_unSelect_color"
+            tl:tl_textsize="15.0sp" />
+        <View
+            android:tag="skin:my_center_cutLine:background"
+            android:background="@color/my_center_cutLine"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_below="@id/tabs" />
+        <include
+            android:id="@+id/layout_server_notice"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tabs"
+            layout="@layout/service_notice" />
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <!--<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <widget.PercentProgressBar
+            android:id="@+id/roundProgressBar2"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:src="@drawable/ico_bg"
+            android:layout_alignBottom="@id/left_btn"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@null"
+            android_custom:roundColor="@color/percent_round_color"
+            android_custom:roundProgressColor="@color/slide_num_color"
+            android_custom:textColor="@color/slide_num_color"
+            android_custom:textSize="10.0sp"
+            android_custom:textIsDisplayable="true"
+         />
+        <widget.CircleImageView
+            android:id="@+id/mIvTop"
+            android:tag="skin:ico_top:src"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:src="@drawable/ico_top"
+            android:layout_alignBottom="@id/left_btn"
+            android:layout_alignParentRight="true" />
+        <widget.CircleImageView
+            android:id="@+id/iv_home_switch_view"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:src="@drawable/ico_switch2"
+            android:layout_toLeftOf="@id/empty2"
+            android:layout_above="@id/roundProgressBar2" />
+        <View
+            android:id="@+id/empty2"
+            android:background="@android:color/transparent"
+            android:layout_width="10.0dip"
+            android:layout_height="1.0dip"
+            android:layout_above="@id/roundProgressBar2"
+            android:layout_alignParentRight="true" />
+        <RelativeLayout
+            android:id="@+id/left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="@dimen/goods_pic_margin"
+            android:layout_above="@id/empty">
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/main_shortcut_menu" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/empty"
+            android:background="@color/transparent"
+            android:layout_width="1.0dip"
+            android:layout_height="@dimen/goods_usercenter_margin_button"
+            android:layout_marginLeft="@dimen/goods_pic_margin"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>-->
+    <!--<include
+        android:id="@+id/layout_main_reload"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?actionBarSize"
+        layout="@layout/reload_layout" />-->
+</android.support.design.widget.CoordinatorLayout>

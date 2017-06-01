@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/mainLayout"
+    android:background="@color/common_app" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout 
+        android:id="@+id/jp_goodsinfo_titleLy" 
+        android:background="@color/common_app"
+        android:layout_width="fill_parent" 
+        android:layout_height="@dimen/top_bar_height">
+        <ImageView
+            android:id="@+id/jp_title_back"
+            android:layout_width="45.329987dip" 
+            android:layout_height="45.329987dip" 
+            android:src="@drawable/jp_top_backbtn" 
+            android:scaleType="centerInside" />
+        <TextView android:textSize="16.0sp"
+                  android:textColor="@color/white" 
+                  android:id="@+id/jp_title_close"
+                  android:visibility="gone" 
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" 
+                  android:layout_marginLeft="4.0dip" 
+                  android:layout_toRightOf="@id/jp_title_back"
+                  android:layout_centerInParent="true" />
+        <ImageView
+            android:id="@+id/jp_title_logo"
+            android:layout_width="120.0dip" 
+            android:layout_height="wrap_content"
+            android:src="@drawable/top_logo_icon"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true" />
+        <TextView android:textSize="20.0sp" 
+                  android:textColor="@color/white"
+                  android:gravity="center" 
+                  android:id="@+id/jp_title_text" 
+                  android:paddingRight="50.0dip" 
+                  android:visibility="gone" 
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" 
+                  android:layout_marginLeft="4.0dip" 
+                  android:textScaleX="0.95"
+                  android:singleLine="true" 
+                  android:layout_toRightOf="@id/jp_title_close"
+                  android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="center" 
+                      android:orientation="vertical" 
+                      android:id="@+id/jp_tbtitle_center" 
+                      android:visibility="gone" 
+                      android:layout_width="wrap_content" 
+                      android:layout_height="fill_parent"
+                      android:layout_marginTop="1.0dip" 
+                      android:layout_marginBottom="3.0dip" 
+                      android:layout_centerInParent="true">
+            <TextView 
+                android:textSize="18.0sp" 
+                android:textColor="@color/white"
+                android:id="@+id/jp_tbtitle_text" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="46.0dip"
+                android:layout_marginRight="46.0dip" 
+                android:textScaleX="0.95" 
+                android:singleLine="true" />
+            <TextView android:textSize="12.0sp" 
+                      android:textColor="@color/white"
+                      android:id="@+id/jp_title_paixia_text"
+                      android:layout_width="wrap_content" 
+                      android:layout_height="wrap_content" 
+                      android:layout_marginLeft="46.0dip" 
+                      android:layout_marginRight="46.0dip"
+                      android:textScaleX="0.95"
+                      android:singleLine="true" />
+        </LinearLayout>
+        <RelativeLayout 
+            android:id="@+id/jp_title_rightLy" 
+            android:visibility="gone"
+            android:layout_width="45.329987dip" 
+            android:layout_height="45.329987dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <ImageView 
+                android:id="@+id/jp_title_right_leftIcon"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.0dip" 
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true" />
+            <TextView android:textSize="10.0sp" 
+                      android:textColor="@color/common_app"
+                      android:gravity="center" 
+                      android:id="@+id/jp_title_right_Icontext"
+                      android:background="@drawable/jp_top_notice_bg"
+                      android:layout_width="wrap_content" 
+                      android:layout_height="14.0dip"
+                      android:layout_marginTop="6.0dip"
+                      android:layout_marginRight="6.0dip" 
+                      android:singleLine="true" 
+                      android:layout_alignParentRight="true" />
+            <ImageView 
+                android:id="@+id/jp_title_right_dot"
+                android:visibility="gone" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="6.0dip" 
+                android:layout_marginRight="6.0dip" 
+                android:src="@drawable/ic_red_hot" 
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout 
+            android:id="@+id/jp_title_right_signLy" 
+            android:visibility="gone" 
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" 
+            android:layout_marginRight="12.0dip" 
+            android:layout_alignParentRight="true">
+            <ImageView 
+                android:id="@+id/jp_title_right_signIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+            <LinearLayout 
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/jp_title_right_signIcon"
+                android:layout_centerVertical="true">
+                <TextView 
+                    android:textSize="12.0sp"
+                    android:textColor="@color/jp_white_text_color" 
+                    android:id="@+id/jp_title_right_signText1" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView android:textSize="10.0sp" 
+                          android:textColor="@color/jp_white_text_color"
+                          android:id="@+id/jp_title_right_signText2"
+                          android:layout_width="wrap_content" 
+                          android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView 
+            android:textSize="16.0sp" 
+            android:gravity="center" 
+            android:id="@+id/jp_title_right_text" 
+            android:paddingRight="12.0dip" 
+            android:visibility="gone"
+            android:layout_width="wrap_content" 
+            android:layout_height="fill_parent" 
+            android:layout_alignParentRight="true" 
+            android:layout_centerVertical="true" />
+        <ImageView android:id="@+id/jp_title_main"
+                   android:visibility="gone" 
+                   android:layout_width="45.329987dip" 
+                   android:layout_height="45.329987dip" 
+                   android:scaleType="centerInside"
+                   android:layout_toLeftOf="@id/jp_title_rightLy" />
+    </RelativeLayout>
+</RelativeLayout>

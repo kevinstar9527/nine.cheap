@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="notice_text_size">12sp</dimen>
+    <dimen name="size_32">32dp</dimen>
+
+    <dimen name="left_item_all_margin">
+        3.0dip</dimen>
+    <dimen name="left_item_bottom_gap">
+        6.0dip</dimen>
+    <dimen name="left_item_text_size">
+        12.0sp</dimen>
+    <dimen name="left_item_top_gap">
+        12.0dip</dimen>
+</resources>
